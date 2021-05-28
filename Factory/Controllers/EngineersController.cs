@@ -63,40 +63,40 @@ namespace FactoryControllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-    public ActionResult AddCourse(int id)
+    public ActionResult AddMachine(int id)
     {
-      var thisStudent = _db.Students.FirstOrDefault(student => student.StudentId == id);
-      ViewBag.CourseId = new SelectList(_db.Courses, "CourseId", "Name");
-      return View(thisStudent);
+      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+      return View(thisEngineer);
     }
     [HttpPost]
-    public ActionResult AddCourse(Student student, int CourseId)
+    public ActionResult AddCourse(Engineer engineer, int MachineId)
     {
-      if (CourseId != 0)
+      if (MachineId != 0)
       {
-        _db.CourseDepartmentStudent.Add(new CourseDepartmentStudent() { CourseId = CourseId, StudentId = student.StudentId });
+        _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = engineer.EngineerId });
       }
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
     public ActionResult Delete(int id)
     {
-      var thisStudent = _db.Students.FirstOrDefault(student => student.StudentId == id);
-      return View(thisStudent);
+      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+      return View(thisEngineer);
     }
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      var thisStudent = _db.Students.FirstOrDefault(student => student.StudentId == id);
-      _db.Students.Remove(thisStudent);
+      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+      _db.Engineers.Remove(thisEngineer);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
     [HttpPost]
-    public ActionResult DeleteCourse(int joinId)
+    public ActionResult DeleteMachine(int joinId)
     {
-      var joinEntry = _db.CourseDepartmentStudent.FirstOrDefault(entry => entry.CourseDepartmentStudentId == joinId);
-      _db.CourseDepartmentStudent.Remove(joinEntry);
+      var joinEntry = _db.EngineerMachine.FirstOrDefault(entry => entry.EngineerMachineId == joinId);
+      _db.EngineerMachine.Remove(joinEntry);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

@@ -2,7 +2,7 @@
 
 #### _Brief Project Description, 5/21/2021_
 
-#### By _**Tiffany Greathead**_
+#### By _**Marney Mallory**_
 
 ## Description
 
@@ -71,7 +71,7 @@ _Please reach out through my GitHub account._
 <pre>
 MIT License
 
-Copyright (c) 2021 Tiffany Greathead
+Copyright (c) 2021 Marney Mallory
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -94,4 +94,4 @@ SOFTWARE.
 </pre>
 </details>
 
-Copyright © 2021 **_Tiffany Greathead_**
+Copyright © 2021 **_Marney Mallory_**

@@ -70,7 +70,7 @@ namespace FactoryControllers
       return View(thisEngineer);
     }
     [HttpPost]
-    public ActionResult AddCourse(Engineer engineer, int MachineId)
+    public ActionResult AddMachine(Engineer engineer, int MachineId)
     {
       if (MachineId != 0)
       {

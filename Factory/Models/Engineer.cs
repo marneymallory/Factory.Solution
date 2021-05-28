@@ -10,7 +10,7 @@ namespace Factory.Models
     }
 
     public int EngineerId { get; set; }
-    public int SomeProperty { get; set; }
+    public string Name { get; set; }
     public virtual ICollection<EngineerMachine> JoinEntities { get; }
   }
 }

@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Factory.Models
 {
-  public class WeekFourTemplateContextFactory : IDesignTimeDbContextFactory<FactoryContext>
+  public class FactoryContextFactory : IDesignTimeDbContextFactory<FactoryContext>
   {
 
     FactoryContext IDesignTimeDbContextFactory<FactoryContext>.CreateDbContext(string[] args)

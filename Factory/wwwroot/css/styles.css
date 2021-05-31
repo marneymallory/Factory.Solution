@@ -7,3 +7,12 @@ div#footer {
   background: #333;
   padding: 8px;
 }
+body {
+  background-color: hotpink;
+  text-align: center;
+}
+ul, ol {
+  text-align: left;
+  margin-left: 480px;
+}
+

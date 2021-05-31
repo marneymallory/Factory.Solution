@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -20,7 +21,11 @@ namespace Factory.Controllers
       List<Machine> model = _db.Machines.ToList();
       return View(model);
     }
-
+    public ActionResult Create()
+    {
+      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
+      return View();
+    }
     [HttpPost]
     public ActionResult Create(Machine machine)
     {
